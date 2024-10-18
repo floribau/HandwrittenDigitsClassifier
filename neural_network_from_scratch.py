@@ -36,7 +36,7 @@ def preprocessing(x_train, y_train, x_test, y_test):
     return x_train, y_train, x_test, y_test
 
 
-class NeuralNetwork:
+class NeuralNetworkFromScratch:
     def __init__(self, input_size, hidden_size, output_size):
         self.a1 = None
         self.input_size = input_size
@@ -99,7 +99,7 @@ class NeuralNetwork:
         return accuracy / x.shape[0]
 
 
-nn = NeuralNetwork(28 * 28, 128, 10)
+nn = NeuralNetworkFromScratch(28 * 28, 128, 10)
 # load data
 mnist = datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
